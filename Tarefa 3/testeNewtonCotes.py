@@ -1,4 +1,4 @@
-from integrais import integrar
+from integraisNewtonCotes import integrar
 import math
 
 def iterar(f, a, b, e, grau, modo):
