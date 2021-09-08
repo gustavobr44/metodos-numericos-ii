@@ -1,34 +1,18 @@
-from integraisGaussLegendre import integrar
+from integraisGaussLegendre import iterar
 import math
 
-def iterar(f, a, b, e, pontos):
-    dI = math.inf
-    i = 0
-    I = 0
-
-    while dI > e:
-        i += 1
-        Ip = 0
-        dx = (b - a)/i
-
-        for j in range(i):
-            Ip += integrar(f, a + j*dx, a + (j + 1)*dx, pontos)
-        
-        dI = abs((Ip - I)/Ip)
-        I = Ip
-    
-    return I, i
-
 a = 0
-b = 1
+b = 5
 e = 10**-6
 
-f1 = lambda x: (2*x)**3 #Resposta 2
-f2 = lambda x: math.cos(4*x) #Resposta -0.1892006
-f3 = lambda x: (math.sin(2*x) + 4*(x**2) + 3*x)**2 #Resposta 17.8764703
-f4 = lambda x: (x + (3*x)**2 - math.cos(4*x**1.5) + math.e**(x/3)) #Resposta 4.62323
+f1 = lambda x: (math.log(2*x) * math.cos(4*x))
 
-f = [f1, f2, f3, f4]
+# f1 = lambda x: (2*x)**3 #Resposta 2
+# f2 = lambda x: math.cos(4*x) #Resposta -0.1892006
+# f3 = lambda x: (math.sin(2*x) + 4*(x**2) + 3*x)**2 #Resposta 17.8764703
+# f4 = lambda x: (x + (3*x)**2 - math.cos(4*x**1.5) + math.e**(x/3)) #Resposta 4.62323
+
+f = [f1]
 
 for i in range(len(f)):
     print("Cálculo da integral da função f", i + 1, " com erro de ", e, ":", sep='')

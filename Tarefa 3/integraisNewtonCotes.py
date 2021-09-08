@@ -1,3 +1,5 @@
+import math
+
 def intFechada1(f, xi, xf):
     dx = xf - xi
 
@@ -67,3 +69,21 @@ def integrar(f, xi, xf, grau, modo):
             return intAberta4(f, xi, xf)
     else:
         print("----> ERRO: Grau ou modo inválidos! <----")
+
+def iterar(f, a, b, e, grau, modo):
+    dI = math.inf
+    i = 0
+    I = 0
+
+    while dI > e:
+        i += 1
+        Ip = 0
+        dx = (b - a)/i
+
+        for j in range(i):
+            Ip += integrar(f, a + j*dx, a + (j + 1)*dx, grau, modo)
+        
+        dI = abs((Ip - I)/Ip)
+        I = Ip
+    
+    return I, i

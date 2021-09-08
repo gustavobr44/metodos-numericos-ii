@@ -75,15 +75,24 @@ fTeste = lambda x: 1/(x)**(1/2)
 f1 = lambda x: 1/(x**2)**(1/3)
 f2 = lambda x: 1/raiz(4 - x**2)
 
+print("Função Teste - Resultado e intervalos usados para:")
+print("\tExponencial Simples:", end="\n\t\t")
 print(intSegundaSimples(fTeste, 0, 1, 10**-6, 10**-6))
+print("\tExponencial Dupla:", end="\n\t\t")
 print(intSegundaDupla(fTeste, 0, 1, 10**-6, 10**-6))
 
 # print(intSegundaSimples(lambda x: 1/((x**2)**(1/3)), -1, 1, 10**-4, 10**-4)) #NÃO CONVERGE
 
-print(intSegundaSimples(f1, -1, 0, 10**-6, 10**-6)[0] + intSegundaSimples(f1, 0, 1, 10**-6, 10**-6)[0])
+print("Função 1 - Resultado e intervalos usados para:")
+print("\tExponencial Simples:", end="\n\t\t")
+print(intSegundaSimples(f1, -1, 0, 10**-6, 10**-6)[0] + intSegundaSimples(f1, 0, 1, 10**-6, 10**-6)[0], end="\n\t\t")
 print(intSegundaSimples(f1, -1, 0, 10**-6, 10**-6))
-print(intSegundaDupla(f1, -1, 0, 10**-6, 10**-6)[0] + intSegundaDupla(f1, 0, 1, 10**-6, 10**-6)[0])
+print("\tExponencial Dupla:", end="\n\t\t")
+print(intSegundaDupla(f1, -1, 0, 10**-6, 10**-6)[0] + intSegundaDupla(f1, 0, 1, 10**-6, 10**-6)[0], end="\n\t\t")
 print(intSegundaDupla(f1, -1, 0, 10**-6, 10**-6))
 
-print(intSegundaSimples(lambda x: 1/raiz(4 - x**2), -2, 0, 10**-6, 10**-6))
-print(intSegundaDupla(lambda x: 1/raiz(4 - x**2), -2, 0, 10**-6, 10**-6))
+print("Função 2 - Resultado e intervalos usados para:")
+print("\tExponencial Simples:", end="\n\t\t")
+print(intSegundaSimples(f2, -2, 0, 10**-6, 10**-6))
+print("\tExponencial Dupla:", end="\n\t\t")
+print(intSegundaDupla(f2, -2, 0, 10**-6, 10**-6))

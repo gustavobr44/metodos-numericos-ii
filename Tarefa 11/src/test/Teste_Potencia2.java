@@ -2,7 +2,7 @@ package test;
 
 import metodos.Metodos;
 
-public class Test {
+public class Teste_Potencia2 {
 
 	public static void main(String[] args) {
 		double[][] A1 = { { 5, 2, 1 }, { 2, 3, 1 }, { 1, 1, 2 } };

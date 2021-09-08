@@ -4,12 +4,8 @@ import java.util.Arrays;
 
 import customTypes.*;
 
-public class Teste {
+public class Teste_Potencia1 {
 	public static void main(String[] args) {
-//		double[] A = {1, 2, 3};
-		
-//		System.out.println((new MatrixMethods()).vectorModule(A));
-		
 		double[][] A1 = {{ 5, 2, 1 }, { 2, 3, 1 }, { 1, 1, 2}};
 		double[] v01 = {1, 1, 1};
 		
